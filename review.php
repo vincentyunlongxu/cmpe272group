@@ -31,9 +31,9 @@
 		<?php
 			session_start();
 			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "company";
+            $username = "captajc5_group";
+            $password = "CMPE272";
+            $dbname = "captajc5_group";
 			$conn = new mysqli($servername, $username, $password, $dbname);
 			
 			if ($conn->connect_error) {
@@ -48,14 +48,14 @@
 			$user = $_SESSION['username'];
 			$type = $Type;
 			$product = $ProductName;
-			$sql = "INSERT INTO review (pname,review,rate,user,date,type) VALUES('$product','$review','$rating','$user','$date', '$type')";
+			$sql = "INSERT INTO Review (pname,review,rate,user,date,type) VALUES('$product','$review','$rating','$user','$date', '$type')";
 		
 			if ($conn->query($sql) === TRUE) {
 				echo "New record created successfully"."<br />";
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
-			$query = "SELECT * FROM review";
+			$query = "SELECT * FROM Review";
 			$query .= " WHERE ";
 			if ( !empty($ProductName)){
 				$query .= "pname = '$ProductName' and ";
