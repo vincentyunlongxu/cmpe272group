@@ -1,4 +1,7 @@
 <?php
+  session_start();
+  extract($_POST);
+  
   $servername = "localhost";
   $username = "captajc5_group";
   $password = "CMPE272";
@@ -17,19 +20,43 @@
   
   $result = $conn->query($query);
   $data = $result->fetch_assoc();
-
-  if ($conn->query($sql) === TRUE) {
-      echo "New user created successfully";
-  } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+  if(empty($_POST['review'])){
+	  if ($conn->query($sql) === TRUE) {
+		  echo "New user created successfully";
+	  } else {
+		  echo "Error: " . $sql . "<br>" . $conn->error;
+	  }
   }
-
   $conn->close();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<script src="../js/jquery-2.1.1.js"></script> 
+<link type="text/css" rel="stylesheet" href="../css/style.css">
+<link type="text/css" rel="stylesheet" href="../css/example.css">
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $(function(){ 
+    $('.rate-btn').hover(function(){
+        $('.rate-btn').removeClass('rate-btn-hover');
+        var therate = $(this).attr('id');
+        for (var i = therate; i >= 0; i--) {
+            $('.rate-btn-'+i).addClass('rate-btn-hover');
+        };
+    });
+                  
+    $('.rate-btn').click(function(){    
+        var therate = $(this).attr('id');
+        $('#abc').val(therate);
+        $('.rate-btn').removeClass('rate-btn-active');
+        for (var i = therate; i >= 0; i--) {
+            $('.rate-btn-'+i).addClass('rate-btn-active');
+        };
+    });
+  });
+});
+</script>
 <script>
   $(document).ready(function(){ 
       $("head").load("header.html"); 
@@ -55,6 +82,16 @@
   </style>
 </head>
 <body>
+  <!--facebook-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
   <div id="banner"></div>
   <div class="container" style="height:700px;">
     <div class="row">
@@ -94,6 +131,81 @@
                 </p>
               </div>
             </div>
+          </div>
+          
+                    <div class="col-md-6">
+            <form id="frmreview" role="form" method="post" action="GA_27_0.php">
+              <fieldset>
+                    <legend>Please review and rate:</legend>
+                <!-- <input type="radio" id="star5" name="rating" value="5" /><label for="star5" >5 stars</label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" >4 stars</label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" >3 stars</label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" >2 stars</label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" >1 star</label> -->
+                <div class="rate-ex3-cnt">
+                  <div id="1" class="rate-btn-1 rate-btn"></div>
+                  <div id="2" class="rate-btn-2 rate-btn"></div>
+                  <div id="3" class="rate-btn-3 rate-btn"></div>
+                  <div id="4" class="rate-btn-4 rate-btn"></div>
+                  <div id="5" class="rate-btn-5 rate-btn"></div>
+                </div>
+                <input id="abc" class="hidden" name="rating" value="5" />
+                    <br />
+                    <textarea name="review" rows="4" cols="50" placeholder="Write your review here"></textarea>
+                    <br />
+                    <input type="text" class="hidden" value="GA_27_0" name="ProductName" />
+                    <input type="text" class="hidden" value="Bike" name="Type" />
+                    <!-- <textarea name="headline" rows="1" cols="50" placeholder="Headline for your review"></textarea> -->
+                    <p><font size="2" face="verdana" color="green">Posted publicly as <?php echo $_SESSION["username"];?></font></p>
+                    <button name="btnAddReivew" type="submit" value="add">Submit</button> 
+                </fieldset>
+            </form>
+            <!--facebook-->
+            <div class="fb-like" data-href="http://www.captainlongxu.com/marketplace/bike/GA_27_0.php" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <!--facebook-->
+          </div>
+          <div class="col-md-6" overflow-y: auto;>
+            <form id="frmreview" role="form">
+              <fieldset>    
+                <legend>Review</legend>       
+                <?php
+                  $servername = "localhost";
+                  $username = "captajc5_group";
+                  $password = "CMPE272";
+                  $dbname = "captajc5_group";
+                  
+                  extract($_POST);
+                  // Create connection
+                  $conn = new mysqli($servername, $username, $password, $dbname);
+                  // Check connection
+                  if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                  }
+                  if(!empty($_POST['review'])){
+                    $date = date('Y-m-d').date(' H:i:s', time());
+                    $sql = "INSERT INTO Review (type, pname, review, rate, date) VALUES ('$Type', '$ProductName', '$review', '$rating', '$date')";
+                    $result = $conn->query($sql);
+                  }
+                  $query = "SELECT review, rate, date FROM Review WHERE pname = '$pname' ORDER BY date DESC";
+                  $result = $conn->query($query);
+                  
+                  if ($result->num_rows > 0) {
+                    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+                      print("<p><font size = '6' color='orange'>");
+                      while($row[1]) {
+                        print("*");
+                        $row[1]--;
+                      }
+                        print(" </font><font face='verdana' size = '2'> $row[0]</font>");
+                      print("<br/><font size='1' face='verdana' color='green'>Reviewed on $row[2]</font></p>");
+                    }
+                  } else {
+                    print("<p>There is no review</p>");
+                  } 
+                  $conn->close();
+                ?>                   
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>

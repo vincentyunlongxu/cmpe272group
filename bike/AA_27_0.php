@@ -134,7 +134,7 @@
           </div>
 	
 	 <div class="col-md-6">
-            <form id="frmreview" role="form" method="post" action="BPB.php">
+            <form id="frmreview" role="form" method="post" action="AA_27_0.php">
               <fieldset>
                     <legend>Please review and rate:</legend>
                 <!-- <input type="radio" id="star5" name="rating" value="5" /><label for="star5" >5 stars</label>
@@ -153,15 +153,15 @@
                     <br />
                     <textarea name="review" rows="4" cols="50" placeholder="Write your review here"></textarea>
                     <br />
-                    <input type="text" class="hidden" value="BabyPhotoBook" name="ProductName" />
-                    <input type="text" class="hidden" value="Photo" name="Type" />
+                    <input type="text" class="hidden" value="AA_27_0" name="ProductName" />
+                    <input type="text" class="hidden" value="Bike" name="Type" />
                     <!-- <textarea name="headline" rows="1" cols="50" placeholder="Headline for your review"></textarea> -->
                     <p><font size="2" face="verdana" color="green">Posted publicly as <?php echo $_SESSION["username"];?></font></p>
                     <button name="btnAddReivew" type="submit" value="add">Submit</button> 
                 </fieldset>
             </form>
             <!--facebook-->
-            <div class="fb-like" data-href="http://www.captainlongxu.com/marketplace/photo/BPB.php" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://www.captainlongxu.com/marketplace/bike/AA_27_0.php" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
             <!--facebook-->
           </div>
           <div class="col-md-6" overflow-y: auto;>
