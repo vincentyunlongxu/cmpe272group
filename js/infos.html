@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%- include ../header %>
+<% if(!typeof(design_mode) == undefined){ %>
+<script src="../../public/js/jquery-2.1.1.js"></script>
+<script src="../../public/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../../public/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.css">
+<% }; //endif(!design_mode) %>
+<script type="text/javascript">
+
+</script>
+<style>   
+    p{
+      text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
+    }  
+</style>
+</head>
+<body>
+<%- include ../banner%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <%- include ../left-nav %>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <blockquote><strong>园区简介</strong></blockquote>
+      </h3>
+      <div class="thumbnail text-center" style="width:60%; margin-left:20%;"> <img src="/img/top_view.jpg" alt=""/> </div>
+      <p class="text-left">
+      北戴河信息产业园项目是河北省2008年第二批重点建设项目，规划用地240亩，总建筑面积约13万平方米，容积率0.77%，绿化率41%，计划总投资约4.34亿元人民币。园区规划建设教育培训区、软件研发区、信息技术转化中心区和商务配套区4个区。分两期建设：一期（南区）建设1栋教育培训楼和43栋研发楼；二期（北区）建设20栋信息技术转化办公楼、2栋高管公寓和1栋公共配套建筑。目前一期43栋研发楼工程基本建设完成，已投入使用。
+	  </p>
+	  <div class="thumbnail text-center" style="width:60%; margin-left:20%;"> <img src="/img/plan_view.jpg" alt=""/> </div>
+	  <p class="text-left">
+      经过前期积极开展招商宣传，先后有80余家企业申请入园。公司以“软件研发、文化创意、总部经济”三方面标准确定入园门槛，筛选淘汰，最终与上海文翰软件技术有限公司、北京文豪宏博尔科技股份有限公司、秦皇岛天业通联重工股份有限公司等56家具有一定实力和发展潜力的企业签订入园协议，目前企业正陆续入驻园区。
+      </p>
+      <div class="thumbnail text-center" style="width:60%; margin-left:20%;"> <img src="/img/building.jpg" alt=""/> </div>
+      <p class="text-left">
+      园区整体建成后，预计可实现年销售收入8.8亿元，利税2.6亿元，可新增就业岗位3-5千人。随着企业的陆续入驻，企业间对接与合作的展开，高端人才的引进，必然会加快科研成果向现实生产力的转化，从而将极大地带动本地区区域经济的发展。
+      </p>
+    </div>
+  </div>
+</div>
+<%- include ../footer %>
+</body>
+</html>
+<script type="text/javascript">
+;jQuery(function($){
+	set_nav_path(1, 0);
+});
+</script>

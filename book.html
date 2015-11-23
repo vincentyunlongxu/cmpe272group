@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.1.1.js"></script> 
+<script>
+  $(document).ready(function(){ 
+      $("head").load("header.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#banner").load("banner.php"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#left-nav").load("left-nav.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#footer").load("footer.html"); 
+  });
+</script>
+  <style type="text/css">
+  .this-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 252px;
+    height: 200px;
+  }
+  .this-text{
+    height: 180px; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+  </style>
+</head>
+<body>
+  <div id="banner"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="left-nav"></div>
+      </div>
+      <div class="col-md-9">
+        <h3>
+          <blockquote><strong>Products</strong></blockquote>
+        </h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/javabook.jpg" />
+              <div class="this-text">
+                <h3>Java</h3>
+                <p>Here is the Java Book</p>
+              </div>
+              <p>
+                <a href="book/javabook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/phpBook.jpg" />
+              <div class="this-text">
+                <h3>PHP</h3>
+                <p>Here is the PHP Book</p>
+              </div>
+              <p>
+                <a href="book/phpbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/mysqlbook.jpg" />
+              <div class="this-text">
+                <h3>MySQL</h3>
+                <p>Here is the book for MySQL</p>
+              </div>
+              <p>
+                <a href="book/mysqlbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/htmlbook.jpg" />
+              <div class="this-text">
+                <h3>HTML</h3>
+                <p>Here is the book for HTML</p>
+              </div>
+              <p>
+                <a href="book/htmlbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/agile.jpg" />
+              <div class="this-text">
+                <h3>Agile</h3>
+                <p>Here is the book for agile</p>
+              </div>
+              <p>
+                <a href="book/cppbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/clouding.jpg" />
+              <div class="this-text">
+                <h3>Clouding</h3>
+                <p>Here is the book for Cloud Computing</p>
+              </div>
+              <p>
+                <a href="book/cloudbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/haskell.jpg" />
+              <div class="this-text">
+                <h3>Haskell</h3>
+                <p>Here is the book for Haskell</p>
+              </div>
+              <p>
+                <a href="book/haskellbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/perl.jpg" />
+              <div class="this-text">
+                <h3>Perl</h3>
+                <p>Here is the book for Perl</p>
+              </div>
+              <p>
+                <a href="book/perlbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/matlab.jpg" />
+              <div class="this-text">
+                <h3>Matlab</h3>
+                <p>Here is the book for Matlab</p>
+              </div>
+              <p>
+                <a href="book/matlabbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/ios.jpg" />
+              <div class="this-text">
+                <h3>IOS APP</h3>
+                <p>Here is the book for IOS APP</p>
+              </div>
+              <p>
+                <a href="book/iosbook.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
+</html>
+<script type="text/javascript">
+;jQuery(function($){
+  set_nav_path(2, 0); 
+});
+</script>

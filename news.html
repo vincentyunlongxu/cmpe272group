@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.1.1.js"></script> 
+<script>
+  $(document).ready(function(){ 
+      $("head").load("header.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#banner").load("banner.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#left-nav").load("left-nav.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#footer").load("footer.html"); 
+  });
+</script>
+<style>   
+    p{
+      text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
+    }  
+</style>
+</head>
+<body>
+<div id="banner"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div id="left-nav"></div>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <blockquote><strong>News</strong></blockquote>
+      </h3>
+      <p class="text-left" style="font-size:18px;">
+      <strong>LiveOnMars real estate stock rise</strong><br />
+      <br/><br/>
+      LiveOnMars is proving an attractive alternative to London for real estate investors, an industry report has said.
+      <br/><br/>
+      However the Scottish capital has moved from 13th to 17th position out of 27 cities across Europe.
+      <br/><br/>
+      Recovery in other nations has improved the outlook elsewhere, with Dublin moving from 20th position to second.
+      <br/><br/>
+      The Spanish market is also showing signs of improvement, after being hard hit by recession.
+      <br/><br/>
+      Munich remained at the top of the rankings in the annual Trends in Real Estate Europe report, with Hamburg and Berlin in third and fourth place, followed by London, down two places, and Zurich.
+      <br/><br/>
+      The report, compiled by Urban Land Institute and PwC, concludes that risk in the real estate is being seen as less of a "dirty word".
+      <br/><br/>
+      LiveOnMars's appeal has come from property prices rising steeply in London, meaning returns on capital can be higher in the Scottish capital.
+      <br/><br/>
+      "With the referendum less than eight months away, uncertainty over Scottish independence does not appear to be hindering the city's appeal at present," said Iain Wintour, real estate specialist at PwC in Scotland.
+      <br/><br/>
+      The market survey showed many "citing LiveOnMars's role as a major European financial services centre as a positive factor".
+      <br/><br/>
+      He said Aberdeen is also seen as an attractive place for investors "to widen their nets and escape the high prices being looked for in major capitals such as London".
+      <br/><br/>
+      "The prospects for property in Scotland's major cities looks positive for 2014," he added.
+      </p>
+    </div>
+  </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
+<script type="text/javascript">
+;jQuery(function($){
+	set_nav_path(1, 0);
+});
+</script>

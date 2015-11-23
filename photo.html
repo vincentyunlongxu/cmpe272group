@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.1.1.js"></script> 
+<script>
+  $(document).ready(function(){ 
+      $("head").load("header.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#banner").load("banner.php"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#left-nav").load("left-nav.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#footer").load("footer.html"); 
+  });
+</script>
+  <style type="text/css">
+  .this-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 252px;
+    height: 200px;
+  }
+  .this-text{
+    height: 180px; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+  </style>
+</head>
+<body>
+  <div id="banner"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="left-nav"></div>
+      </div>
+      <div class="col-md-9">
+        <h3>
+          <blockquote><strong>Products</strong></blockquote>
+        </h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/familyalbums.jpg" />
+              <div class="this-text">
+                <h3>Family Photo Albums</h3>
+                <p>Family Photo Albums</p>
+              </div>
+              <p>
+                <a href="photo/FPA.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/babybooks.jpg" />
+              <div class="this-text">
+                <h3>Baby Photo Books</h3>
+                <p>Baby Photo Books</p>
+              </div>
+              <p>
+                <a href="photo/BPB.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/wedding1.jpg" />
+              <div class="this-text">
+                <h3>Wedding Photo</h3>
+                <p>Wedding Photo</p>
+              </div>
+              <p>
+                <a href="photo/WPB.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/canvasprint.jpg" />
+              <div class="this-text">
+                <h3>Photo Canvas Print</h3>
+                <p>Photo Canvas Print</p>
+              </div>
+              <p>
+                <a href="photo/CP.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/mug.jpg" />
+              <div class="this-text">
+                <h3>Photo Mug</h3>
+                <p>Photo Mug</p>
+              </div>
+              <p>
+                <a href="photo/CP.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/iphone.jpg" />
+              <div class="this-text">
+                <h3>Iphone Cases</h3>
+                <p>Iphone Cases</p>
+              </div>
+              <p>
+                <a href="bike/IC.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/wallart.jpg" />
+              <div class="this-text">
+                <h3>Wall Art</h3>
+                <p>Wall Art</p>
+              </div>
+              <p>
+                <a href="photo/WA.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/square.jpg" />
+              <div class="this-text">
+                <h3>Square Print book</h3>
+                <p>Square Print book</p>
+              </div>
+              <p>
+                <a href="photo/SP.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/collageposter.jpg" />
+              <div class="this-text">
+                <h3>Collage Posters</h3>
+                <p>Collage Posters</p>
+              </div>
+              <p>
+                <a href="photo/CPO.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/cd.jpg" />
+              <div class="this-text">
+                <h3>CD Files</h3>
+                <p>CD Files</p>
+              </div>
+              <p>
+                <a href="photo/CD.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
+</html>
+<script type="text/javascript">
+;jQuery(function($){
+  set_nav_path(2, 0); 
+});
+</script>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.1.1.js"></script> 
+  <script>
+    $(document).ready(function(){ 
+        $("head").load("header.html"); 
+    }); 
+    $(document).ready(function(){ 
+        $("#banner").load("banner.html"); 
+    }); 
+    $(document).ready(function(){ 
+      $("#left-nav").load("left-nav.html"); 
+    }); 
+    $(document).ready(function(){ 
+        $("#footer").load("footer.html"); 
+    });
+  </script>
+</head>
+<body>
+<div id="banner"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div id="left-nav"></div>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <blockquote><strong>Create User</strong></blockquote>
+      </h3>
+      <form id="frmCreate" role="form" method="post" action="create.php">
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpfirstname">firstname : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpfirstname" placeholder="firstname"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inplastname">lastname : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inplastname" placeholder="lastname"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpemail">email : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpemail" placeholder="email"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpaddress">address : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpaddress" placeholder="address"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inphomephone">homephone : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inphomephone" placeholder="homephone"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpcellphone">cellphone : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpcellphone" placeholder="cellphone"/>
+          </div>
+        </div>
+        <div class="form-group text-right">
+          <button id="btnCreate" type="submit" class="btn btn-primary">Create User</button>
+        </div>
+      </form>
+      <h3>
+        <blockquote><strong>Search User</strong></blockquote>
+      </h3>
+      <form id="frmSearch" role="form" method="post" action="database.php">
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpfirstname">firstname : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpfirstname" placeholder="firstname"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inplastname">lastname : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inplastname" placeholder="lastname"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpemail">email : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpemail" placeholder="email"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inphomephone">homephone : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inphomephone" placeholder="homephone"/>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="col-md-3">
+            <label for="inpcellphone">cellphone : </label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" class="form-control" name="inpcellphone" placeholder="cellphone"/>
+          </div>
+        </div>
+        <div class="form-group text-right">
+          <button name="btnSearch" type="submit" class="btn btn-primary" value="search">Search User</button>
+          <button name="btnSearch" type="submit" class="btn btn-primary" value="searchall">Search All Users</button>
+        </div>
+        <h3>
+          <blockquote><strong>List Users</strong></blockquote>
+        </h3>
+        <div class="form-group text-right">
+          <button name="btnSearch" type="submit" class="btn btn-primary" value="searchall">ListOfMyUsers</button>
+          <a type="button" class="btn btn-primary" href="allusers.php">ListOfAllUsers</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="footer"></div>
+
+</body>
+</html>

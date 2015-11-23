@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.1.1.js"></script> 
+<script>
+  $(document).ready(function(){ 
+      $("head").load("header.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#banner").load("banner.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#left-nav").load("left-nav.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#footer").load("footer.html"); 
+  });
+</script>
+<style>   
+    p{
+      text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
+    }  
+</style>
+</head>
+<body>
+<div id="banner"></div>
+<div class="container" style="height:700px;">
+  <div class="row">
+    <div class="col-md-3">
+      <div id="left-nav"></div>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <blockquote><strong>About Us</strong></blockquote>
+      </h3>
+      <div class="thumbnail text-center" style="width:60%; margin-left:20%;"> <img src="img/top_view.jpg" alt=""/> </div>
+      <p class="text-left" style="font-size:15px;">
+      Since 2015, LiveOnMars's been focused on building the most vibrant and valuable marketplace in the real estate industry. <br /><br />
+
+      LiveOnMars gives home buyers, sellers and renters all the tools and valuable information they need to be successful in the home search process. Through its innovative mobile and web products, LiveOnMars provides insights about the house, the neighborhood and the real estate process while connecting people with the right agents. 
+      <br/><br/>
+      LiveOnMars offers mobile apps for iPhone and Android, including dedicated apps for renters, and mortgage seekers. LiveOnMars attracts more than 55 million unique house hunters every month, the majority of which comes from mobile devices. <br /><br />
+
+      LiveOnMars is a fully owned subsidiary of the Zillow Group. 
+      </p>
+    </div>
+  </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
+<script type="text/javascript">
+;jQuery(function($){
+	set_nav_path(1, 0);
+});
+</script>

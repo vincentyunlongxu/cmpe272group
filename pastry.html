@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-2.1.1.js"></script> 
+<script>
+  $(document).ready(function(){ 
+      $("head").load("header.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#banner").load("banner.php"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#left-nav").load("left-nav.html"); 
+  }); 
+  $(document).ready(function(){ 
+      $("#footer").load("footer.html"); 
+  });
+</script>
+  <style type="text/css">
+  .this-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 252px;
+    height: 200px;
+  }
+  .this-text{
+    height: 180px; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+  </style>
+</head>
+<body>
+  <div id="banner"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="left-nav"></div>
+      </div>
+      <div class="col-md-9">
+        <h3>
+          <blockquote><strong>Products</strong></blockquote>
+        </h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/Spider donuts.png" />
+              <div class="this-text">
+                <h3>Spider Donut</h3>
+                <p>Price: $2/piece</p>
+              </div>
+              <p>
+                <a href="pastry/spiderdonut.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/strawberrypie.png" />
+              <div class="this-text">
+                <h3>Strawberry Pie</h3>
+                <p>Price: $30/pie</p>
+              </div>
+              <p>
+                <a href="pastry/strawberrypie.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/mochacup.png" />
+              <div class="this-text">
+                <h3>Mocha cream cup</h3>
+                <p>Price: $5/piece</p>
+              </div>
+              <p>
+                <a href="pastry/mochacup.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/easterbunny.png" />
+              <div class="this-text">
+                <h3>easterbunny</h3>
+                <p>Price: $3/piece</p>
+              </div>
+              <p>
+                <a href="pastry/easterbunny.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/bananabread.png" />
+              <div class="this-text">
+               <h3>Banana Bread</h3>
+                <p>Price: $16/loaf</p>
+              </div>
+              <p>
+                <a href="pastry/bananabread.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/pandacookie.png" />
+              <div class="this-text">
+                <h3>panda cookie</h3>
+                <p>Price:$2/piece</p>
+              </div>
+              <p>
+                <a href="pastry/pandacookie.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/whitemooncake.jpg" />
+              <div class="this-text">
+                <h3>white Mooncake</h3>
+                <p>Price:$5/piece</p>
+              </div>
+              <p>
+                <a href="pastry/whitemooncake.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img class = "this-img" src = "img/traditionalmooncake.png" />
+              <div class="this-text">
+                <h3>traditional mooncake</h3>
+                <p>Price:$7/piece</p>
+              </div>
+              <p>
+                <a href="pastry/traditionalmooncake.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/puffmooncake.png" />
+              <div class="this-text">
+                <h3>puff mooncake</h3>
+                <p>Price:$5/piece</p>
+              </div>
+              <p>
+                <a href="pastry/puffmooncake.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/specialmooncake.png" />
+              <div class="this-text">
+                <h3>special mooncake</h3>
+                <p>Price:$5/piece</p>
+              </div>
+              <p>
+                <a href="pastry/specialmooncake.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/fruitcake.png" />
+              <div class="this-text">
+                <h3>fruit cake</h3>
+                <p>Price:$40/cake</p>
+              </div>
+              <p>
+                <a href="pastry/fruitcake.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img  class = "this-img" src = "img/matchacake.png" />
+              <div class="this-text">
+                <h3>matcha cake</h3>
+                <p>Price:$48/dozen</p>
+              </div>
+              <p>
+                <a href="pastry/matchacake.php" class="btn btn-primary" role="button">Buy Now!</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
+</html>
+<script type="text/javascript">
+;jQuery(function($){
+  set_nav_path(2, 0); 
+});
+</script>
